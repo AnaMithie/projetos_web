@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demonstração de Unidades de Medida CSS</title>
+  <style>
+    body {
+      font-size: 16px; /* Define o tamanho base para 'rem' */
+    }
+
+    .container {
+      width: 70vw; /* 80% da largura da janela de visualização */
+      margin: 0 auto;
+      border: 2px solid blue;
+      padding: 1rem; /* Espaçamento interno usando 'rem' */
+    }
+
+    h1 {
+      font-size: 2rem; /* Tamanho da fonte em relação ao 'body' */
+      margin-bottom: 1em; /* Margem inferior em relação ao tamanho da fonte do 'h1' */ 
+    }
+
+    p {
+      font-size: 1.2em; /* Tamanho da fonte em relação ao 'body' */
+      line-height: 1.5em; /* Altura da linha em relação ao tamanho da fonte do 'p' */
+    }
+
+    .box {
+      width: 100px;    /* Largura fixa em pixels */
+      height: 100px;   /* Altura fixa em pixels */
+      background-color: lightblue;
+      margin-bottom: 10px;
+    }
+
+    .box-percent {
+      width: 50%;      /* Largura relativa ao elemento pai */
+      height: 50px;   /* Altura fixa em pixels */
+      background-color: lightgreen;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Unidades de Medida em CSS</h1>
+
+    <p>Este exemplo demonstra as diferentes unidades de medida em CSS, incluindo:</p>
+
+    <ul>
+      <li><strong>px (pixels):</strong> Usado para definir a largura da div <code>.box</code> (azul).</li>
+      <li><strong>%:</strong> Usado para definir a largura da div <code>.box-percent</code> (verde) em relação ao elemento pai <code>.container</code>.</li>
+      <li><strong>em:</strong> Usado para definir o tamanho da fonte dos elementos <code>h1</code> e <code>p</code>, e a margem inferior do <code>h1</code>, em relação ao elemento pai.</li>
+      <li><strong>rem:</strong> Usado para definir o espaçamento interno do <code>.container</code> e o tamanho da fonte do <code>body</code>, em relação à raiz do documento.</li>
+      <li><strong>vw:</strong> Usado para definir a largura do <code>.container</code> em relação à largura da janela de visualização.</li>
+    </ul>
+
+    <div class="box"></div>
+    <div class="box-percent"></div>
+  </div>
+</body>
+</html>
