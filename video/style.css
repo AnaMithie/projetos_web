@@ -1,0 +1,21 @@
+.video-container {
+    position: relative;
+    width: 640px;
+}
+video {
+    height: 100px;
+}
+.controls {
+    background-color: black;
+    color: wheat;  
+    padding: 10px;     
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+.controls button, .controls input{
+    margin-right: 10px;
+}
