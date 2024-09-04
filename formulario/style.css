@@ -1,0 +1,38 @@
+body{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: antiquewhite;
+    min-height: 100vh;
+}
+form{
+    background-color: rgb(250, 248, 237);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+}
+input,textarea{
+    width: 100%;
+    padding: 10px;
+    border: 1px dashed #ccc;
+}
+textarea{
+    height: 120px;
+}
+button{
+    background-color: rgb(240, 217, 188);
+    color: rgb(139, 101, 4);
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;  
+}
+
+button:hover {
+    background-color: rgb(235, 172, 121);
+}
