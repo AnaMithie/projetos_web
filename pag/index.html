@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pag.css">
+    <title>Vestido Elegante</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Vestido Terracota Elegante</h1>
+        
+        <div class="carousel">
+            <div class="carousel-images">
+                <img src="Captura de tela 2024-09-25 162431.png" alt="Vestido - Ângulo 1" class="active">
+                <img src="Captura de tela 2024-09-25 162402.png" alt="Vestido - Ângulo 2">
+                <img src="Captura de tela 2024-09-25 162413.png" alt="Vestido - Ângulo 3">
+            </div>
+            <button class="prev" onclick="changeSlide(-1)"><</button>
+            
+        </div>
+
+        <h2>R$200,00</h2>
+        <p class="description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit hic quam voluptates eius veniam provident, porro rerum fugit impedit exercitationem.</p>
+        
+        <button class="compra-button">Comprar Agora</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function changeSlide(direction) {
+            const slides = document.querySelectorAll('.carousel-images img');
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+    </script>
+</body>
+</html>
