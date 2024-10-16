@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Class</title>
+    <link rel="stylesheet" href="music.css">
+    
+</head>
+<div class="menu">
+    <img src="img/logo.png" alt="logo" >
+    <a href="https://www.instagram.com/accounts/login/">Instagram</a>
+    <a href="https://web.whatsapp.com/">Whatsapp</a>
+    <a href="">sobre</a>
+    <a href="https://www.musicacenter.com.br/?srsltid=AfmBOooa-fWneE5tmu7TxGS4sv1nuSTVzOoY69OBCmp64wI7XQx-SfiD">Loja</a>
+    <a href="">Informações</a>
+</div>
+<body>
+
+    <div class="fundo">
+        
+        <img src="img/fundo.jpg" alt="img fundo">
+        <div class="uma">
+        <img src="img/1.png" alt="">
+        </div>
+        <div class="duas">
+        <img src="img/image.png" alt=""></div>
+        <section>
+            <h2>SOBRE</h2>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.    Eum ab quis, molestiae ullam esse nulla dolorem voluptas delectus mollitia a quidem itaque vitae nihil sit. Ullam distinctio in non doloremque.</p>
+        </section>
+</div>
+
+<div class="carrossel">
+    <input type="radio" name="indice" id="imagem1" checked>
+    <input type="radio" name="indice" id="imagem2">
+    <input type="radio" name="indice" id="imagem3">
+    <input type="radio" name="indice" id="imagem4">
+
+    <div class="imagens">
+        <div class="imagem" id="slide1">
+            <img src="img/cello.png" alt="Imagem 1"> R$ 5.500
+        </div>
+        <div class="imagem" id="slide2">
+            <img src="img/Inserir um título (220 x 260 px) (3).png" alt="Imagem 2">
+        R$3.500</div>
+        <div class="imagem" id="slide3">
+            <img src="img/Inserir um título (220 x 260 px).png" alt="Imagem 3">R$4.600
+        </div>
+
+        <div class="imagem" id="slide4">
+            <img src="img/sax.png" alt="Imagem 4">
+        </div>
+    </div>
+
+    <div class="controles">
+        <label for="imagem1"></label>
+        <label for="imagem2"></label>
+        <label for="imagem3"></label>
+        <label for="imagem4"></label>
+    </div>
+    <button class="botao-compra">Comprar Agora</button>
+</div>
+
+
+<div class="container">
+    <h1>Formulário de Contato</h1>
+    <form action="#" method="POST" onsubmit="return validarFormulario()">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="identificacao">Identificação (letras ou números):</label>
+        <input type="text" id="identificacao" name="identificacao" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+
+<script>
+    function validarFormulario() {
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const identificacao = document.getElementById('identificacao').value.trim();
+        const mensagem = document.getElementById('mensagem').value.trim();
+
+        if (!nome || !email || !identificacao || !mensagem) {
+            alert("Todos os campos são obrigatórios!");
+            return false;
+        }
+        return true;
+    }
+</script>
+
+
+</body>
+
+<footer>
+    <img src="img/logo.png" alt="">
+    <p>Telefone: 11 9000-8888</p>
+    <p>Copyright 2024 | Mithi Music - Todods os direitos reservados.</p>
+    <p>R.Eunicie Cerqueira de Innocencio N°25</p>
+    
+</footer>
+
+
+</html> 

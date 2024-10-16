@@ -1,0 +1,183 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: aliceblue;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.cabecalho{
+    height: 150px;
+}
+
+.menu{
+    display: flex;
+}
+
+.menu a{
+    padding-top: 100px;
+    padding-left: 200px;
+    display: flex;
+    color: aliceblue;
+    font-size: larger;
+}
+
+.fundo img{
+    width: 550px;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.644);
+}
+
+footer{
+    align-items: center;
+    text-align: center;
+}
+
+
+.carrossel {
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border: 2px solid #dddddd4d;
+    border-radius: 10px;
+    margin-left: 400px;
+    margin-top: 20px;
+}
+
+.imagens {
+    display: flex;
+    transition: transform 0.3s ease;
+}
+
+.imagem {
+    min-width: 100%;
+}
+
+.imagem img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.controles {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+.controles label {
+    cursor: pointer;
+    height: 10px;
+    width: 10px;
+    background-color: #bbbbbb00;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 5px;
+    transition: background-color 0.3s;
+    margin-left: 480px;
+    background-color: aliceblue;
+    margin-bottom: 50px;
+}
+
+#imagem1:checked ~ .imagens {
+    transform: translateX(0%);
+}
+
+#imagem2:checked ~ .imagens {
+    transform: translateX(-100%);
+}
+
+#imagem3:checked ~ .imagens {
+    transform: translateX(-200%);
+}
+
+#imagem4:checked ~ .imagens {
+    transform: translateX(-300%);
+}
+
+.controles label:hover {
+    background-color: #777;
+}
+  
+.botao-compra{
+    
+    margin-top: 10px;
+    background-color: rgb(187, 178, 167);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: larger;
+}
+
+.botao-compra:hover{
+    background-color: rgb(153, 151, 151);
+}
+
+.container {
+    width: 300px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgb(109, 107, 107);
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-left: 1300px;
+    margin-top: -510px;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    margin: 10px 0 5px;
+    display: block;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #7f817f;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #a2a3a2;
+}
+
+section{
+    background-color: black;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: x-large;
+    background-color: #333232;
+}
+
+.uma img{
+    margin-left: 560px;
+    margin-top:-1000px;
+    width: 600px;
+    height: 520px;
+}
+
+.duas img{
+    margin-left: 1200px;
+    margin-top:-1000px;
+    width: 600px;
+    height: 520px;
+}
