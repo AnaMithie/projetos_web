@@ -218,7 +218,7 @@ body {
     font-size: 3rem;
   }
 }
-.title-screen-content {
+.title-screen__content {
   display: grid;
   grid-gap: 0 1rem;
   align-content: center;
@@ -227,7 +227,7 @@ body {
   grid-template-rows: repeat(3, auto);
   max-width: 90vw;
 }
-.descripton {
+.description {
   grid-column: 2;
   text-align: justify;
   max-width: 210px;
