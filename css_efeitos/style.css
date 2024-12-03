@@ -1,0 +1,30 @@
+.background-transition {
+    background-color:lightseagreen;
+    color: aliceblue;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    transition: opacity 0.8s ease;
+}
+.opacity-transition{
+    opacity: 0.5;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+.size-transition{
+
+width: 150px;
+height: 100px;
+background-color: blueviolet;
+color: aliceblue;
+}
+.size-transition :hover{
+    transform: scale(1.5);
+}
