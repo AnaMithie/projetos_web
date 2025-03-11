@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios DOM</title>
+    <script src="17.js" defer></script>
+</head>
+<body>
+    <h2>1 - Ocultar imagem</h2>
+    <button onclick="toggleImage()">Ocultar/Exibir Imagem</button>
+    <br>
+    <img id="image" src="fo.webp" alt="Imagem">
+    
+    <h2>2 - Tema escuro</h2>
+    <button onclick="toggleTheme()">Mudar Tema</button>
+    <p id="text">Texto de exemplo</p>
+    
+    <h2>3 - Completar texto</h2>
+    <p id="sentence">Meu nome é ____, tenho ____ anos, moro em ____, estudo no ____ e faço o curso de ____.</p>
+    <button onclick="completeText()">Completar</button>
+    
+    <h2>4 - Cores do Brasil</h2>
+    <p id="brasil">Brasil</p>
+    <button onclick="changeColor()">Trocar Cor</button>
+    
+    <h2>5 - Não clique</h2>
+    <button onclick="alert('Pare de clicar no botão!')">Não clique</button>
+    
+    <h2>6 - Escolha premiada</h2>
+    <p>Escolha uma porta e receba seu prêmio</p>
+    <button onclick="showPrize(1)">Porta 1</button>
+    <button onclick="showPrize(2)">Porta 2</button>
+    <button onclick="showPrize(3)">Porta 3</button>
+    <p id="prize"></p>
+    
+    <h2>7 - Redimensionar imagem</h2>
+    <button onclick="resizeImage()">Redimensionar</button>
+    <br>
+    <img id="resizableImage" src="fo.webp">
+    
+    <h2>8 - Semáforo</h2>
+    <div id="light1" style="width: 200px; height: 200px; background: black; margin: 5px;"></div>
+    <div id="light2" style="width: 200px; height: 200px; background: black; margin: 5px;"></div>
+    <div id="light3" style="width: 200px; height: 200px; background: black; margin: 5px;"></div>
+    <button onclick="changeLight()">Próximo</button>
+    
+    <h2>9 - Recomendação de filme</h2>
+    <div id="movie" onmouseover="showMovie()" onmouseout="hideMovie()" style="width: 200px; height: 200px; background: black; color: white; text-align: center; line-height: 200px;">Filme de comédia</div>
+</body>
+</html>
