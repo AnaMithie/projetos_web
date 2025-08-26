@@ -1,4 +1,3 @@
-// Entrada de Dados
 function boasVindas() {
   const nome = prompt("Digite seu nome:");
   alert("Bem-vindo(a), " + nome + "!");
@@ -9,7 +8,6 @@ function mostrarValor() {
   document.getElementById("saidaTexto").innerText = "Você digitou: " + texto;
 }
 
-// Conversão de Tipos
 function somaValores() {
   const n1 = parseFloat(prompt("Digite o primeiro número:"));
   const n2 = parseFloat(prompt("Digite o segundo número:"));
@@ -30,7 +28,6 @@ function verificarMaioridade() {
   }
 }
 
-// Funções de Texto
 function manipularTexto() {
   const frase = prompt("Digite uma frase:");
   alert("Total de caracteres: " + frase.length);
@@ -47,7 +44,6 @@ function manipularTexto() {
   alert("Caractere na posição 5: " + frase.charAt(4));
 }
 
-// Funções Matemáticas
 function adivinharNumero() {
   const numeroSecreto = Math.floor(Math.random() * 10) + 1;
   const tentativa = parseInt(prompt("Adivinhe o número de 1 a 10:"));
@@ -82,7 +78,6 @@ function novosValores() {
   alert("Raiz quadrada: " + Math.sqrt(numero));
 }
 
-// Datas
 function mostrarData() {
   const hoje = new Date();
   console.log("Data atual: " + hoje.toLocaleDateString());
@@ -91,7 +86,7 @@ function mostrarData() {
 
 function diasParaAniversario() {
   const hoje = new Date();
-  const aniversario = new Date(hoje.getFullYear(), 9, 15); // Ex: 15 de Outubro
+  const aniversario = new Date(hoje.getFullYear(), 9, 15);
 
   if (hoje > aniversario) {
     aniversario.setFullYear(hoje.getFullYear() + 1);
@@ -102,3 +97,4 @@ function diasParaAniversario() {
 
   alert(`Faltam ${dias} dias para o seu aniversário.`);
 }
+
