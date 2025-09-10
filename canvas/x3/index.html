@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong</title>
+    <style>
+        body {
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 100vh
+            margin: 0
+        }
+        canvas {
+            border: 2px solid black
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canva" width="800" height="400"></canvas>
+
+    <script>
+        const canvas = document.getElementById("canva")
+        const ctx = canvas.getContext("2d")
+
+        let x = canvas.width / 2
+        let y = canvas.height / 2
+        let dx = 3
+        let dy = -3
+        const raio = 10
+
+        const raqueteAltura = 10
+        const raqueteLargura = 75
+        let raqueteX = (canvas.width - raqueteLargura) / 2
+
+        let teclaDireita = false
+        let teclaEsquerda = false
+        let jogoAtivo = false
+        let animacao
+
+        document.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowRight") teclaDireita = true
+            if (e.key === "ArrowLeft") teclaEsquerda = true
+        })
+
+        document.addEventListener("keyup", function (e) {
+            if (e.key === "ArrowRight") teclaDireita = false
+            if (e.key === "ArrowLeft") teclaEsquerda = false
+        })
+
+        function desenharBola() {
+            ctx.beginPath()
+            ctx.arc(x, y, raio, 0, Math.PI * 2)
+            ctx.fillStyle = "red"
+            ctx.fill()
+            ctx.closePath()
+        }
+
+        function desenharRaquete() {
+            ctx.beginPath()
+            ctx.rect(raqueteX, canvas.height - raqueteAltura, raqueteLargura, raqueteAltura)
+            ctx.fillStyle = "blue"
+            ctx.fill()
+            ctx.closePath()
+        }
+
+        function desenhar() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height)
+
+            desenharBola()
+            desenharRaquete()
+
+            x += dx
+            y += dy
+
+            if (x + raio > canvas.width || x - raio < 0) dx = -dx
+            if (y - raio < 0) dy = -dy
+
+            if (y + raio > canvas.height) {
+                if (x > raqueteX && x < raqueteX + raqueteLargura) {
+                    dy = -dy
+                } else {
+                    encerrarJogo()
+                    return
+                }
+            }
+
+            if (teclaDireita && raqueteX < canvas.width - raqueteLargura) raqueteX += 7
+            if (teclaEsquerda && raqueteX > 0) raqueteX -= 7
+
+            animacao = requestAnimationFrame(desenhar)
+        }
+
+        function iniciarJogo() {
+            x = canvas.width / 2
+            y = canvas.height / 2
+            dx = 3
+            dy = -3
+            raqueteX = (canvas.width - raqueteLargura) / 2
+            jogoAtivo = true
+            desenhar()
+        }
+
+        function encerrarJogo() {
+            cancelAnimationFrame(animacao)
+            alert("Game Over!")
+          
+        }
+        desenhar()
+    </script>
+</body>
+</html>
