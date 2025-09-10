@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     <canvas id="meuCanvas" width="400" height="300" style="border: 5px solid black;"></canvas>
+
+    <script>
+
+        const canvas= document.getElementById("meuCanvas")
+        const ctx = canvas.getContext("2d")
+
+        ctx.fillStyle = "green"
+        ctx.fillRect(70,70,70,70)
+
+        ctx.beginPath()
+        ctx.arc(200,107,38,0,2*Math.PI)
+        ctx.fillStyle = "red"
+        ctx.fill()
+
+
+        ctx.clearRect(100,70,50,25) 
+    </script>
+
+    <canvas id="meuCanvas2" width="400" height="300" style="border: 5px solid rgb(255, 0, 0);"></canvas>
+
+    <script>
+
+        const canvas2= document.getElementById("meuCanvas2")
+        const ctx2 = canvas2.getContext("2d")
+
+        ctx2.beginPath()
+        ctx2.arc(200,147,100,0,2*Math.PI)
+        ctx2.fillStyle = "orange"
+        ctx2.fill()
+
+         ctx2.beginPath()
+        ctx2.arc(150,137,20,0,2*Math.PI)
+        ctx2.fillStyle = "black"
+        ctx2.fill()
+
+        ctx2.beginPath()
+        ctx2.arc(250,137,20,0,2*Math.PI)
+        ctx2.fillStyle = "black"
+        ctx2.fill()
+
+        
+        ctx2.beginPath()
+        ctx2.arc(203,165,20,3.15,0,Math.PI)
+        ctx2.fillStyle = "black"
+        ctx2.fill()
+
+    </script>
+
+     <canvas id="meuCanvas3" width="400" height="300" style="border: 5px solid rgb(212, 0, 255);"></canvas>
+
+    <script>
+
+        const canvas3= document.getElementById("meuCanvas3")
+        const ctx3 = canvas3.getContext("2d")
+
+        ctx3.fillStyle = "pink"
+        ctx3.fillRect(140,140,120,100)
+
+        ctx3.fillStyle = "#663b06"
+        ctx3.fillRect(188,200,25,40)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(190,202,9,9)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(202,202,9,9)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(190,215,9,9)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(202,215,9,9)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(190,228,9,9)
+
+        ctx3.fillStyle = "#8a520c"
+        ctx3.fillRect(202,228,9,9)
+
+        ctx3.beginPath()
+        ctx3.arc(209,220,3,0,2*Math.PI)
+        ctx3.fillStyle = "orange"
+        ctx3.fill()
+
+
+        ctx3.beginPath()
+        ctx3.moveTo(200,70)
+        ctx3.lineTo(100,140)
+        ctx3.lineTo(300,140)
+        ctx3.closePath()
+        ctx3.fillStyle = "red"
+        ctx3.fill()
+
+
+    </script>
+
+ <canvas id="meuCanvas4" width="400" height="300" style="border: 5px solid rgb(0, 255, 170);"></canvas>
+
+    <script>
+        const canvas4= document.getElementById("meuCanvas4")
+        const ctx4 = canvas4.getContext("2d")
+
+        ctx4.fillStyle = "black"
+        ctx4.fillRect(100,90,200,40)
+
+        ctx4.fillStyle = "red"
+        ctx4.fillRect(100,130,200,40)
+
+        ctx4.fillStyle = "yellow"
+        ctx4.fillRect(100,170,200,40)
+
+
+    </script>
+    
+
+
+
+</body>
+</html>
