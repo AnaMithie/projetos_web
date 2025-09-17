@@ -1,0 +1,38 @@
+body{
+    margin: 20px;
+}
+
+.porcentagem {
+    width: 50%;
+    height: 50px;
+    background-color: rgb(157, 219, 255);
+}
+
+.pai{
+    font-size: 16px;
+    background-color: pink;
+}
+
+.filho{
+    font-size: 2em;
+}
+
+html{
+    font-size: 16px;
+}
+
+.rem{
+    font-size: 2rem;
+    background-color: rgb(190, 255, 92);
+}
+
+.vh{
+    height: 50hv ;
+    background-color: rgb(238, 130, 238);
+}
+
+.vw{
+    width: 80vw;
+    height: 50px;
+    background-color: rgb(255, 253, 142);
+}
