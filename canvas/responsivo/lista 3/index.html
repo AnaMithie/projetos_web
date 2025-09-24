@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <body>
+        <h1>Banner</h1>
+        <img id="banner" src="img/gatoBobo2.jpg" alt="">
+
+        <script>
+            const banner = document.getElementById("banner")
+            function trocarImg() {
+                if (window.innerWidth < 600) {
+                    banner.src = "img/gatoBobo.webp"
+                } else {
+                    banner.src = "img/gatoBobo2.jpg"
+                    }
+            }
+            trocarImg()
+            window.addEventListener("resize", trocarImg)
+        </script>
+
+        <h1>Trocar imagem</h1>
+
+<img id="imagem" src="img/lamp.png" alt="Lamp">
+
+<script>
+    const img = document.getElementById("imagem");
+    
+    function trocar() {
+        if (img.src.includes("lamp.png")) {
+            img.src = "img/lamp2.png"
+        } else {
+            img.src = "img/lamp.png"
+        }
+    }
+    
+    img.addEventListener("click", trocar)
+</script>
+
+<img id="img" src="img/gatoEscond.png" alt="Gato">
+<button id="botao">Mostrar/Esconder</button>
+
+<script>
+    const imagem = document.getElementById("img");
+    const botao = document.getElementById("botao");
+
+    function toggleImagem() {
+        if (imagem.style.display === "none") {
+            imagem.style.display = "block";
+        } else {
+            imagem.style.display = "none";
+        }
+    }
+
+    botao.addEventListener("click", toggleImagem);
+</script>
+
+
+
+<h1>Alterar imagem de perfil</h1>
+
+<img id="perfil" src="img/gatoPerf.png" alt=" ">
+<button id="btn">Alterar</button>
+
+ <style>
+        #perfil {
+            border-radius: 50%;
+        }
+</style>
+<script>
+    const perfil1 = document.getElementById("perfil")
+    const perfilBt = document.getElementById("btn")
+
+
+    function toggleImagem() {
+        if (perfil1.src.includes("gatoPerf.png")) {
+            perfil1.src = "img/perfil2.png"
+        } else {
+            perfil.src = "img/gatoPerf.png"
+        }
+    }
+
+    perfilBt.addEventListener("click", toggleImagem)
+</script>
+
+
+<h1>Galeria</h1>
+
+    <style>
+        body {
+            text-align: center;
+            padding: 20px;
+        }
+        .miniaturas img {
+            width: 100px;
+            margin: 5px;
+        }
+       
+        #imagem-grande {
+            margin-top: 30px;
+        }
+        #imagem-grande img {
+            max-width: 80%;
+            max-height: 500px;
+            display: none;
+        }
+    </style>
+
+<div class="miniaturas">
+    <img id="img1" src="img/img1.png" alt="Gato1">
+    <img id="img2" src="img/im2.png" alt="Gato2">
+    <img id="img3" src="img/img3.png" alt="Gato3">
+    <img id="img4" src="img/img4.png" alt="Gato4">
+</div>
+
+<div id="imagem-grande">
+    <img id="grande" src="" alt="Imagem Grande">
+</div>
+
+<script>
+    const fofo = document.querySelectorAll(".miniaturas img");
+    const imgGrande = document.getElementById("grande");
+
+    fofo.forEach(img => {
+        img.addEventListener("click", () => {
+            imgGrande.src = img.src;
+            imgGrande.style.display = "inline";
+        });
+    });
+</script>
+
+<h1>Banner 3 versões</h1>
+
+ <img id="banner3" src="img/manha.png" alt="">
+ <script>
+            const banner3 = document.getElementById("banner3")
+            function trocarImg5() {
+                if (window.innerWidth < 600) {
+                    banner3.src = "img/manha.png"
+                } else if (window.innerWidth < 1024) {
+                    banner3.src = "img/tarde.png"
+                } else if (window.innerWidth >= 1024) {
+                    banner3.src = "img/noite.png"
+                }
+            }
+            trocarImg5()
+            window.addEventListener("resize", trocarImg5)
+        </script>
+
+
+  <h1>Carrossel</h1>
+
+  <img id="imagem9" src="" alt="Imagem do carrossel">
+
+  <div>
+    <button onclick="voltar()">Anterior</button>
+    <button onclick="avancar()">Próxima</button>
+  </div>
+
+  <style>
+      #imagem9 {
+          max-width: 300px;
+          max-height: 300px;
+          display: block;
+          margin: 20px auto;
+      }
+  </style>
+  <script>
+
+    const fofoCarousel = [
+        "img/fofo1.png",
+        "img/fofo2.png",
+        "img/fofo3.png",
+    ];
+
+    let indiceAtual = 0
+
+    function mostrarImagem() {
+      document.getElementById('imagem9').src = fofoCarousel[indiceAtual]
+    }
+
+    function avancar() {
+      indiceAtual = (indiceAtual + 1) % fofoCarousel.length
+      mostrarImagem()
+    }
+
+    function voltar() {
+      indiceAtual = (indiceAtual - 1 + fofoCarousel.length) % fofoCarousel.length
+      mostrarImagem()
+    }
+
+  
+    window.onload = mostrarImagem
+  </script>
+
+
+
+
+</body>
+</html>
